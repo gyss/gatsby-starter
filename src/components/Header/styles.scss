@@ -1,0 +1,241 @@
+@import '../../styles/colors.scss';
+
+header {
+  background: white;
+  width: 100%;
+  z-index: 98;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+}
+@media (min-width: 920px) {
+  header {
+    height: 62px;
+    border-bottom: 1px solid $border;
+  }
+}
+
+.header-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-align: center;
+  align-items: center;
+  margin: 0 auto;
+  flex-direction: column;
+}
+
+@media (min-width: 1050px) {
+  .header-container {
+    flex-direction: row;
+    padding-left: 1.05rem;
+    padding-right: 1.05rem;
+    justify-content: flex-start;
+  }
+}
+
+.header-mobile {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 62px;
+  padding: 20px;
+  align-items: center;
+  z-index: 100;
+  background: white;
+  border-bottom: 1px solid $border;
+
+  a {
+    display: flex;
+    margin-right: 0.7rem;
+    -webkit-box-align: center;
+    align-items: center;
+    text-decoration: none;
+    overflow: hidden;
+
+    img {
+      height: 32px;
+      max-width: unset;
+    }
+  }
+}
+@media (min-width: 1050px) {
+  .header-mobile {
+    padding: 0;
+    width: 133px;
+    flex-direction: column;
+    justify-content: center;
+    border: none;
+    background: transparent;
+
+    a {
+      width: auto;
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+.burger {
+  border: none;
+  background: transparent;
+  color: #222;
+  width: 20px;
+  height: 16px;
+  position: relative;
+  -webkit-transform: rotate(0);
+  transform: rotate(0);
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+  display: block;
+  outline: none;
+}
+
+@media (min-width: 1049px) {
+  .burger {
+    display: none;
+  }
+}
+
+.burger span {
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: #000;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+  transition: 0.25s ease-in-out;
+}
+
+.burger span:nth-child(1) {
+  top: 0;
+}
+
+.burger span:nth-child(2),
+.burger span:nth-child(3) {
+  top: 6px;
+}
+
+.burger span:nth-child(4) {
+  top: 12px;
+}
+
+.burger.open span:nth-child(1),
+.burger.open span:nth-child(4) {
+  top: 16px;
+  width: 0;
+  left: 50%;
+}
+
+.burger.open span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.burger.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.menu {
+  transition: all 0.5s ease;
+
+  ul {
+    display: flex;
+    overflow-x: auto;
+    align-self: flex-end;
+    flex-grow: 1;
+    margin: 0 0 0 5px;
+    list-style: none;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 1049px) {
+  .menu {
+    z-index: 10;
+    transform: translateY(-100%);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background: white;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.04);
+    border-bottom: 1px solid $border;
+  }
+
+  .menu.open {
+    transform: translateY(62px);
+  }
+}
+
+@media (min-width: 1050px) {
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+
+    ul {
+      height: 62px;
+      flex-direction: row;
+    }
+  }
+}
+
+.nav-link {
+  padding: 0 10px;
+  margin: 0 10px;
+  font-size: 14px;
+  font-weight: 600;
+  height: 50px;
+  line-height: 50px;
+  color: inherit;
+  display: block;
+  position: relative;
+  text-transform: uppercase;
+  top: 0;
+  z-index: 1;
+  border-bottom: 0.125rem solid transparent;
+  text-decoration: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  border-bottom: 1px solid $border;
+}
+
+.nav-link:hover {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-link.active {
+  color: $primary;
+}
+
+@media (min-width: 1050px) {
+  .nav-link {
+    border: none;
+    height: 62px;
+    line-height: 62px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .nav-link:hover {
+    border-bottom: 2px solid $primary;
+  }
+  .nav-link.active {
+    border-bottom: 2px solid $primary;
+  }
+}
+
+@media (min-width: 1050px) and (max-width: 1298px) {
+  .nav-link {
+    font-size: 12px;
+    font-weight: 600;
+    margin: 0 3px;
+    padding: 0 6px;
+  }
+}

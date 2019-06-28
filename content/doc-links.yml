@@ -1,0 +1,16 @@
+- title: PAGE 1
+  link: /page1
+
+- title: PAGE 2
+  link: /page2
+
+  items:
+    - title: Page 2.1
+      items:
+        - title: Page21
+          link: /page2/page21
+
+    - title: PAge 2.2
+      items:
+        - title: Page22
+          link: /page2/page22

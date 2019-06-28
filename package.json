@@ -1,0 +1,57 @@
+{
+  "name": "gatsby-starter",
+  "description": "Gatsby Starter",
+  "version": "1.0.0",
+  "author": "The starter",
+  "main": "n/a",
+  "scripts": {
+    "start": "npm run clean && npm run dev",
+    "dev": "gatsby develop --open --host 0.0.0.0 --port 3000",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "rm -rf .cache/ && rm -rf public/",
+    "format": "prettier --write \"**/*.+(js|jsx|json|css|scss)\"",
+    "lint": "tslint --project ./src",
+    "precommit": "lint-staged",
+    "test": "jest",
+    "test:w": "jest --watch"
+  },
+  "dependencies": {
+    "classnames": "2.2.6",
+    "gatsby": "2.10.4",
+    "path": "0.12.7",
+    "prismjs": "1.15.0",
+    "react": "16.6.3",
+    "react-dom": "16.6.3",
+    "react-helmet": "5.2.0",
+    "react-hubspot-form": "1.3.7",
+    "react-scroll": "1.7.10"
+  },
+  "devDependencies": {
+    "@babel/core": "7.2.2",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-jest": "23.6.0",
+    "babel-preset-gatsby": "0.2.0",
+    "gatsby-cli": "2.7.2",
+    "gatsby-plugin-google-analytics": "2.1.0",
+    "gatsby-plugin-manifest": "2.2.0",
+    "gatsby-plugin-no-sourcemaps": "2.1.0",
+    "gatsby-plugin-purgecss": "4.0.0",
+    "gatsby-plugin-react-helmet": "3.1.0",
+    "gatsby-plugin-robots-txt": "1.4.0",
+    "gatsby-plugin-sass": "2.1.0",
+    "gatsby-remark-autolink-headers": "2.1.0",
+    "gatsby-remark-prismjs": "3.3.0",
+    "gatsby-source-filesystem": "2.1.0",
+    "gatsby-transformer-remark": "2.5.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "23.6.0",
+    "node-sass": "4.12.0",
+    "prettier": "1.15.3",
+    "react-test-renderer": "16.7.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gyss/gatsby-starter"
+  }
+}

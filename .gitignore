@@ -1,0 +1,21 @@
+.DS_Store
+
+# Project dependencies
+.cache
+node_modules
+yarn-error.log
+
+.DS_Store
+node_modules/
+
+.gatsby-context.js
+.DS_Store
+.intermediate-representation/
+.cache/
+.vscode/
+yarn.lock
+
+# Firebase
+.firebase
+.runtimeconfig.json
+public

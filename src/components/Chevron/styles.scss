@@ -1,0 +1,28 @@
+@import '../../styles/colors.scss';
+
+.chevron {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-shrink: 0;
+  margin-left: auto;
+  min-height: 50px;
+  position: relative;
+  width: 45px;
+  border-left: 1px solid $border;
+
+  svg {
+    color: #222;
+    opacity: 0.4;
+    margin-left: auto;
+    margin-right: auto;
+    transform: rotateX(0deg);
+    transition: -webkit-transform 0.2s ease 0s, transform 0.2s ease 0s;
+  }
+}
+.chevron.expanded {
+  svg {
+    opacity: 1;
+    transform: rotateX(180deg);
+  }
+}
